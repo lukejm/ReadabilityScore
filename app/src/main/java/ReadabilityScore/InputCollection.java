@@ -27,6 +27,7 @@ public class InputCollection {
         inputText = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         inputText.add(sc.nextLine());
+        sc.close();
         return inputText;
     }
 }
