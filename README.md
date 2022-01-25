@@ -28,7 +28,7 @@ Polysyllables: 23384
 Automated Readability Index: 3.86 (about 10-year-olds). \
 Flesch–Kincaid readability tests: 4.25 (about 10-year-olds). \
 Simple Measure of Gobbledygook: 8.11 (about 14-year-olds). \
-Coleman–Liau index: 7.16 (about 13-year-olds). \
+Coleman–Liau index: 7.16 (about 13-year-olds). 
 
 This text should be understood in average by 11.75.
 
