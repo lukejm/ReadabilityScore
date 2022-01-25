@@ -17,10 +17,10 @@ public class Main {
 
     // must be called first
     private static void processArguments(String[] args) {
-        if (args.length == 0) { // input via console
-            textProcessor = new TextProcessor();
-        } else { // input via file
+        if (args[0].length() > 0) { // input via console
             textProcessor = new TextProcessor(args[0]);
+        } else {
+            System.out.println("Error: no file argument.");
         }
     }
 
