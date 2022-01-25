@@ -8,6 +8,7 @@ public class TextProcessor {
 
     private final String SYLLABLES = "syllables";
     private final String POLYSYLLABLES = "polySyllables";
+
     private long sentenceCount = -1;
     private long wordCount = -1;
     private long syllableCount = -1;
@@ -186,7 +187,7 @@ public class TextProcessor {
     }
 
     private void countSyllables(List<String> text) {
-        Pattern pattern = Pattern.compile("\\(^([\\w|]{1})|([^aeiouyAEIOUY])|([\\w]{1})$\\)");
+        Pattern pattern = Pattern.compile("\\(([\\w|])|([^aeiouyAEIOUY])|([\\w])\\)");
         long syllableCount = 0;
         long polySyllableCount = 0;
         for (String el : text) {

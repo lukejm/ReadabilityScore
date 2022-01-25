@@ -15,21 +15,6 @@ public abstract class ScoreCalculation implements Score {
     }
 
     @Override
-    public double getScore() {
-        return 0;
-    }
-
-    @Override
-    public int getAge() {
-        return 0;
-    }
-
-    @Override
-    public TextProcessor getTextProcessor() {
-        return this.textProcessor;
-    }
-
-    @Override
     public long getSentenceCount() {
         return textProcessor.getSentenceCount();
     }
@@ -60,6 +45,10 @@ public abstract class ScoreCalculation implements Score {
 
     public double getSentenceAverage() {
         return textProcessor.getSentenceAverage();
+    }
+
+    public int getAge() {
+        return getAgeMap().get((int) Math.round(getScore()));
     }
 
     protected Map<Integer, Integer> getAgeMap() {

@@ -7,9 +7,9 @@ public class InputCollection {
 
     private static List<String> inputText;
 
-    private InputCollection() {
-    }
+    private InputCollection() { }
 
+    // get text from file
     protected static List<String> processInput(String fileName) {
         inputText = new ArrayList<>();
 
@@ -23,6 +23,7 @@ public class InputCollection {
         return inputText;
     }
 
+    // get text from command line
     protected static List<String> processInput() {
         inputText = new ArrayList<>();
         Scanner sc = new Scanner(System.in);

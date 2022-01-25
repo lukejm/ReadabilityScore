@@ -1,7 +1,5 @@
 package readability;
 
-import java.util.Scanner;
-
 public class Main {
     // program processes text once, each sub-object of abstract class
     // ScoreCalculation.java uses the same data. It is arbitrary which
@@ -13,8 +11,8 @@ public class Main {
 
     public static void main(String[] args) {
         processArguments(args);
-        System.out.print(getHeaderInfo());
-        System.out.print(getUserInput());
+        System.out.println(getHeaderInfo());
+        System.out.println(getAllInfo());
     }
 
     // must be called first
@@ -34,33 +32,6 @@ public class Main {
                 ar.getCharacterCount(),
                 ar.getSyllableCount(),
                 ar.getPolysyllableCount());
-    }
-
-    private static String getUserInput() {
-
-        System.out.print("Enter the score you want to calculate (ARI, FK, SMOG, CL, all): ");
-
-        String input = "";
-        Scanner sc = new Scanner(System.in);
-
-        input = sc.nextLine();
-        System.out.println();
-
-        if (input.equals("ARI")) {
-            return getAutoRead();
-        } else if (input.equals("FK")) {
-            return getFKInfo();
-        } else if (input.equals("SMOG")) {
-            return getGobbleInfo();
-        } else if (input.equals("CL")) {
-            return getColeLiauInfo();
-        } else if (input.equals("all")) {
-            return getAllInfo();
-        } else {
-            System.out.println("Error: wrong input, please try again");
-            getUserInput();
-        }
-        return "Error: in Main.getUserInput()";
     }
 
     private static String getAllInfo() {
