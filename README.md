@@ -4,7 +4,7 @@
 
 ***
 
-git clone git@github.com:lukejm/ReadabilityScore.git
+"git clone git@github.com:lukejm/ReadabilityScore.git"
 
 gradle build
 
